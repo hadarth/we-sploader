@@ -60,9 +60,24 @@
 
 .buttons {
   height: 40px;
-  width: 200px;
+  width: 220px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.start, .stop {
+  border: 1px solid black;
+  padding: 2px;
+  box-shadow: 0 1px #999;
+  border-radius: 4px;
+}
+
+.start:hover, .stop:hover {background-color: #efefef}
+
+.start:active, .stop:active {
+  background-color: #569ff6;
+  box-shadow: 0 1px #666;
+  transform: translateY(1px);
 }
