@@ -15,7 +15,8 @@ export default class Sploader extends Component {
   render() {
     return (
       <div className="container">
-      { this.renderSploader(this.props.percent) }
+        { this.renderSploader(this.props.percent) }
+        <div className="loading_value">{ this.props.percent }%</div>
       </div>
     );
   }

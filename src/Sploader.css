@@ -1,5 +1,5 @@
 .svg_container {
-  position: absolute;
+  position: relative;
   width: 200px;
   height: 200px;
 }
@@ -29,4 +29,16 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.loading_value {
+  position: absolute;
+  font-size: 3em;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
 }
