@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Button from './Button'
+
 
 export default class Sploader extends Component {
 
@@ -7,7 +9,7 @@ export default class Sploader extends Component {
     this.SploaderSvg = React.createRef();
   }
 
-  renderSploader(percent) {
+  renderSVG(percent) {
     const strokeDashoffset = 100 - percent
     return (
       <svg ref={this.SploaderSvg} className='spinit' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'>
@@ -17,29 +19,26 @@ export default class Sploader extends Component {
     )
   }
 
-  start() {
-    this.SploaderSvg.current.style.animationPlayState = ""
-  }
+  start = () => this.SploaderSvg.current.style.animationPlayState = ""
 
-  stop() {
-    this.SploaderSvg.current.style.animationPlayState = "paused"
-  }
+  stop = () => this.SploaderSvg.current.style.animationPlayState = "paused"
 
   render() {
+    const { percent } = this.props
     return (
       <div className="container">
         <div className="sploader_container">
           <div className="svg_container">
-            { this.renderSploader(this.props.percent) }
+            { this.renderSVG(percent) }
           </div>
           <div className="loading_value">
-            { this.props.percent }
+            { percent }
             <span className="percent">%</span>
           </div>
         </div>
         <div className="buttons">
-          <div className="start" onClick={() => this.start()}>start spinning</div>
-          <div className="stop" onClick={() => this.stop()}>stop spinning</div>
+          <Button text='start spinning' onClick={this.start}/>
+          <Button text='stop spinning' onClick={this.stop}/>
         </div>
       </div>
     );

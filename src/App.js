@@ -5,7 +5,7 @@ import './Sploader.css';
 class App extends Component {
   render() {
     return (
-      <Sploader percent={25}/>
+      <Sploader percent={13}/>
     );
   }
 }
