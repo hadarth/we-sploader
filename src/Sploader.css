@@ -1,18 +1,39 @@
-.svg_container {
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.sploader_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
+}
+
+.svg_container {
   width: 200px;
   height: 200px;
 }
 
+.loading_value {
+  position: absolute;
+  font-size: 3em;
+  padding-left: 10px;
+}
+
 .base {
   fill:none;
-  stroke:#f3f3f3;
+  stroke:#efefef;
   stroke-width:10;
 }
 
 .blue {
   fill:none;
-  stroke:#0071bc;
+  stroke:#569ff6;
   stroke-width:10;
   stroke-linecap:round;
   stroke-dasharray: 100;
@@ -31,14 +52,17 @@
   }
 }
 
-.loading_value {
-  position: absolute;
-  font-size: 3em;
+.percent {
+  font-size: 0.5em;
+  vertical-align: super;
+  color: #efefef;
 }
 
-.container {
+.buttons {
+  height: 40px;
+  width: 200px;
   display: flex;
-  flex: 1;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
