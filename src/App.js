@@ -5,7 +5,7 @@ import './App.css';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {percent: '', value: ''};
+    this.state = {percent: 13, value: ''};
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -14,18 +14,18 @@ class App extends Component {
   }
 
   onClick (value) {
-    this.setState({percent: value})
+    if (!isNaN(parseFloat(value))) { this.setState({percent: parseInt(value, 10)}) }
   }
 
   render() {
     return (
-      <div className='ss'>
-        <label className='padded'>
+      <div>
+        <label>
           Enter loading:
           <input type="text" value={this.state.value} onChange={this.handleChange} />
           <button onClick={() => this.onClick(this.state.value)}>Submit</button>
         </label>
-        <Sploader percent={this.state.percent || 13}/>
+        <Sploader percent={this.state.percent}/>
       </div>
     );
   }

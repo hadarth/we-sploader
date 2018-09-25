@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SploaderGraphics Should render and calculate percentage 1`] = `
+<svg
+  className="spinit"
+  viewBox="0 0 200 200"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <circle
+    className="base"
+    cx="100"
+    cy="100"
+    r="90"
+  />
+  <circle
+    className="blue"
+    cx="100"
+    cy="100"
+    pathLength="100"
+    r="90"
+    style={
+      Object {
+        "strokeDashoffset": 90,
+      }
+    }
+  />
+</svg>
+`;
